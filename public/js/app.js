@@ -19,46 +19,49 @@ $(document).ready(function(){
 
 
   function updateDisplay(){
-    
-  }
-  function divide(){
-    
-  }
-
-  function multiply(){
-    
+    $('.num').text;
+    $display.this;
+    console.log(this);
   }
 
-  function subtract(){
-    
+  function divide('divide'){
+    return number / number;
   }
 
-  function equal(){
-    
+  function multiply('multiply'){
+    return number * number;
   }
 
-  function plus(){
-    
+  function subtract('subtract'){
+    return number - number;
   }
 
-  function clear(){
-    
+  function equal('equal'){
+    return
   }
 
-  function memAdd(){
-
+  function plus('add'){
+    return number + number;
   }
 
-  function memSub(){
-
+  function clear('C'){
+    return
   }
 
-  function memClear(){
+  function memAdd('mem-plus'){
+    return
+  }
 
+  function memSub('mem-minus'){
+    return
+  }
+
+  function memClear('mem-clear'){
+    return
   }
 
   function memDisplay(){
-    
+    return
   }
 
 
