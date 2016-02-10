@@ -14,12 +14,15 @@
   padding: 13px;
   margin-top: 100px;
   width: 295px;
+  border: outset .25em;
+  border-radius: 1em;
 }
 
 #display {
   text-align: right;
   background-color: white;
-  border: solid black 1px;
+  border: inset black 1px;
+  border-radius: .5em;
   padding: 8px;
   width: 255px;
   margin: 1px 10px 10px;
@@ -30,6 +33,7 @@ text-align: center;
 margin: 10px 10px 10px;
 width: 40px;
 background-color: green;
+border: groove .25px;
 }
 
 .operator {
@@ -39,4 +43,5 @@ background-color: pink;
 #equal {
   width: 230px;
   background-color: white;
+  border: groove .25px;
 }

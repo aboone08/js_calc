@@ -1,8 +1,8 @@
 $(document).ready(function(){
-  var calculator = Object.create(Calculator);
-  var $display = $('#display');
+  var calculator = $('#calculator');
+  var display = $('#display');
   var lastOperation = '';
-
+  var number = $('#number');
 
   $('#clear').on('click', clear);
   $('#plus').on('click', plus);
@@ -19,48 +19,62 @@ $(document).ready(function(){
 
 
   function updateDisplay(){
-    $('.num').text;
-    $display.this;
-    console.log(this);
+    var thing = $(this).text();
+    display.append(thing);
+    console.log(thing);
   }
 
-  function divide('divide'){
-    return number / number;
+
+  function divide(){
+    var divide = $('#divide').text();
+    display.append(divide);
+    console.log(divide);
   }
 
-  function multiply('multiply'){
+
+  function multiply(multiply){
+    $('#multiply').on('click', multiply);
     return number * number;
   }
 
-  function subtract('subtract'){
+
+  function subtract(subtract){
+    $('#subtract').on('click', subtract);
     return number - number;
   }
 
-  function equal('equal'){
+  function equal(equal){
+    $('#equal').on('click', equal);
     return
   }
 
-  function plus('add'){
+  function plus(plus){
+    $('#plus').on('click', plus);
     return number + number;
   }
 
-  function clear('C'){
+  function clear(C){
+    $('#clear').on('click', clear);
     return
   }
 
-  function memAdd('mem-plus'){
+  function memAdd(memPlus){
+    $('#mem-plus').on('click', mem-plus);
     return
   }
 
-  function memSub('mem-minus'){
+  function memSub(memMinus){
+    $('#mem-minus').on('click', mem-minus);
     return
   }
 
-  function memClear('mem-clear'){
+  function memClear(memClear){
+    $('#mem-clear').on('#mem-clear');
     return
   }
 
-  function memDisplay(){
+  function memDisplay(memDisplay){
+    $('#mem-recall').on('click', mem-recall);
     return
   }
 
