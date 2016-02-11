@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  var calculator = $('#calculator');
+  var calculator = Object.create(Calculator);
   var display = $('#display');
   var lastOperation = '';
   var number = $('#number');
@@ -19,61 +19,97 @@ $(document).ready(function(){
 
 
   function updateDisplay(){
-    var thing = $(this).text();
-    display.append(thing);
-    console.log(thing);
+    var numVal = $(this).text();
+    if (display.text() === '0'){
+      display.text(numVal);
+    }else if (display.text().length < 8) {
+      display.text(display.text() + numVal);
+    }else{
+      display.text(display.text());
+    }
+
   }
 
 
   function divide(){
-    var divide = $('#divide').text();
-    display.append(divide);
-    console.log(divide);
+    var displayText = display.text();
+    var num = parseFloat(displayText);
+    calculator.add(num);
+    display.text(0);
+    lastOperation = '/';
   }
 
 
-  function multiply(multiply){
-    $('#multiply').on('click', multiply);
-    return number * number;
+  function multiply(){
+    var displayText = display.text();
+    var num = parseFloat(displayText);
+    calculator.add(num);
+    display.text();
+    lastOperation = '*';
   }
 
 
-  function subtract(subtract){
-    $('#subtract').on('click', subtract);
-    return number - number;
+  function subtract(){
+    var displayText = display.text();
+    var num = parseFloat(displayText);
+    calculator.add(num);
+    display.text(0);
+    lastOperation = '-';
   }
 
-  function equal(equal){
-    $('#equal').on('click', equal);
-    return
+  function equal(){
+    var displayText = display.text();
+    var num = parseFloat(displayText);
+
+    if(lastOperation === '+'){
+      calculator.add(num);
+  }
+    if(lastOperation === '-'){
+      calculator.subtract(num);
+  }
+    if(lastOperation === '*'){
+      calculator.multiply(num);
+  }
+    if(lastOperation === '/'){
+      calculator.divide(num);
+  }
+    var result = calculator.result();
+    display.text(result);
+    calculator.reset();
   }
 
-  function plus(plus){
-    $('#plus').on('click', plus);
-    return number + number;
+
+  function plus(){
+    var displayText = display.text();
+    var num = parseFloat(displayText);
+    calculator.add(num);
+    display.text(0);
+    lastOperation = '+';
   }
 
-  function clear(C){
-    $('#clear').on('click', clear);
-    return
+  function clear(){
+    var displayText = display.text();
+    var num = parseFloat(displayText);
+    calculator.reset();
+    display.text(0);
   }
 
-  function memAdd(memPlus){
+  function memAdd(){
     $('#mem-plus').on('click', mem-plus);
     return
   }
 
-  function memSub(memMinus){
+  function memSub(){
     $('#mem-minus').on('click', mem-minus);
     return
   }
 
-  function memClear(memClear){
+  function memClear(){
     $('#mem-clear').on('#mem-clear');
     return
   }
 
-  function memDisplay(memDisplay){
+  function memDisplay(){
     $('#mem-recall').on('click', mem-recall);
     return
   }

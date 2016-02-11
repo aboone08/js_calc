@@ -1,4 +1,4 @@
-var calculator = {
+var Calculator = {
   current: 0,
   memory: 0,
   add: add,
@@ -9,7 +9,6 @@ var calculator = {
   reset: reset,
   addToMemory: addToMemory,
   subtractFromMemory: subtractFromMemory,
-  number: 'number',
 }
 
 function add(num){
