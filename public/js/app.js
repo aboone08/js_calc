@@ -44,7 +44,7 @@ $(document).ready(function(){
     var displayText = display.text();
     var num = parseFloat(displayText);
     calculator.add(num);
-    display.text();
+    display.text(0);
     lastOperation = '*';
   }
 
@@ -99,25 +99,29 @@ $(document).ready(function(){
     calculator.addToMemory(memNew);
     display.text(0);
     console.log(calculator.memory);
-    lastOperation = '+= num';
+    lastOperation = 'mem-plus';
   }
 
   function memSub(){
     var displayText = display.text();
     var memNew = parseFloat(displayText);
-    calculator.memory(memNew);
+    calculator.subtractFromMemory(memNew);
     display.text(0);
     console.log(calculator.memory);
-    lastOperation = '-= num';
+    lastOperation = 'mem-minus';
   }
 
   function memClear(){
-    calculator.memClear();
+    var displayText = display.text();
+    var mem = calculator.getMemory();
+    calculator.clearMemory(mem);
     display.text(0);
-    lastOperation = 'memClear';
+    console.log(calculator.memory);
+    lastOperation = 'clearMemory';
   }
 
   function memDisplay(){
+    var displayText = display.text();
     var mem = calculator.getMemory();
     display.text(mem);
     lastOperation = 'memDisplay';

@@ -10,6 +10,7 @@ var Calculator = {
   addToMemory: addToMemory,
   subtractFromMemory: subtractFromMemory,
   getMemory: getMemory,
+  clearMemory: clearMemory
 }
 
 function add(num){
@@ -36,7 +37,7 @@ function addToMemory(num){
 }
 
 function subtractFromMemory(num){
-  this.current -= num;
+  this.memory -= num;
 }
 
 function clearMemory(){

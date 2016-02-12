@@ -20,8 +20,8 @@
 
 #display {
   text-align: right;
-  background-color: white;
-  border: inset black 1px;
+  background-color: #F0FFF0;
+  border: inset grey 2px;
   border-radius: .5em;
   padding: 10px;
   width: 255px;
@@ -42,6 +42,6 @@ background-color: pink;
 
 #equal {
   width: 230px;
-  background-color: white;
-  border: groove .25px;
+  background-color: #FFFAFA;
+  border: groove  2px;
 }
