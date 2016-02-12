@@ -9,6 +9,7 @@ var Calculator = {
   reset: reset,
   addToMemory: addToMemory,
   subtractFromMemory: subtractFromMemory,
+  getMemory: getMemory,
 }
 
 function add(num){
