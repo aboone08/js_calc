@@ -19,6 +19,8 @@
 }
 
 #display {
+  font-family: monospace;
+  font-size: 20px;
   text-align: right;
   background-color: #F0FFF0;
   border: inset grey 2px;
@@ -41,7 +43,17 @@ background-color: pink;
 }
 
 #equal {
-  width: 230px;
-  background-color: #FFFAFA;
+  width: 110px;
+  background-color: #d9ffb3;
   border: groove  2px;
+}
+
+#clear {
+  width: 105px;
+  background-color: #FFFAFA;
+  border: groove 2px;
+}
+
+#pokadot {
+  margin-left: 100px;
 }

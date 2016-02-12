@@ -15,14 +15,14 @@ $(document).ready(function(){
   $('#mem-minus').on('click', memSub);
   $('#mem-recall').on('click', memDisplay);
   $('#mem-clear').on('click', memClear);
-
+  $('#sqrt').on('click', sqrt);
 
 
   function updateDisplay(){
     var numVal = $(this).text();
     if (display.text() === '0'){
       display.text(numVal);
-    }else if (display.text().length < 8) {
+    }else if (display.text().length < 18) {
       display.text(display.text() + numVal);
     }else{
       display.text(display.text());
@@ -57,6 +57,14 @@ $(document).ready(function(){
     lastOperation = '-';
   }
 
+  function sqrt(){
+    var displayText = display.text();
+    var num = parseFloat(displayText);
+    calculator.sqrt(num);
+    display.text();
+    lastOperation = '√';
+  }
+
   function equal(){
     var displayText = display.text();
     var num = parseFloat(displayText);
@@ -72,6 +80,9 @@ $(document).ready(function(){
   }
     if(lastOperation === '/'){
       calculator.divide(num);
+  }
+    if(lastOperation === '√'){
+      calculator.sqrt(num);
   }
     var result = calculator.result();
     display.text(result);

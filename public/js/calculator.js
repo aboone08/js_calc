@@ -10,7 +10,8 @@ var Calculator = {
   addToMemory: addToMemory,
   subtractFromMemory: subtractFromMemory,
   getMemory: getMemory,
-  clearMemory: clearMemory
+  clearMemory: clearMemory,
+  sqrt: sqrt
 }
 
 function add(num){
@@ -46,4 +47,8 @@ function clearMemory(){
 
 function getMemory(){
   return this.memory;
+}
+
+function sqrt(num){
+  this.current = Math.sqrt(num);
 }
